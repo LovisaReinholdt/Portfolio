@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovisa Reinholdt - Om mig</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Importera GFS Didot */
+        @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+        
+        body {
+            font-family: 'GFS Didot', serif;
+            background-color: #faf8f5; /* Ljus kräm */
+            color: #4d403a; /* Mörk text */
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        h1, h2, h3 {
+            font-family: 'GFS Didot', serif;
+        }
+
+        /* Enkel animering för sektioner när de dyker upp */
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Stil för verktygsknappar */
+        .tool-chip {
+            background-color: #e6dccf; /* Ljus accentfärg */
+            color: #4d403a;
+        }
+    </style>
+</head>
+<body class="text-[#4d403a] fade-in">
+
+    <!-- Header & Navigation -->
+    <header class="bg-[#faf8f5] shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="ux_portfolio.html" class="text-2xl font-bold font-serif text-[#4d403a] tracking-wider">LR</a>
+            <nav class="flex space-x-6">
+                <!-- Länk tillbaka till huvudsidan -->
+                <a href="ux_portfolio.html" class="text-[#4d403a] hover:text-opacity-80 transition-colors">Tillbaka till portföljen</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-24">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            
+            <!-- Profilbild -->
+            <div class="mb-12 fade-in">
+                <!-- START: Här sätter du in länken till din profilbild -->
+                <!-- Byt ut "bildlänk" mot din egen permanenta profilbildlänk -->
+                <img 
+                    src="https://i.imgur.com/QQmkMcl.jpeg" 
+                    alt="Din profilbild" 
+                    class="rounded-full shadow-xl w-48 h-48 object-cover mx-auto ring-4 ring-[#e6dccf]"
+                >
+                <!-- SLUT: Bildlänken går i "src" attributet ovan -->
+            </div>
+
+            <!-- Titel och Huvudtext -->
+            <section class="mb-20 fade-in">
+                <h1 class="text-5xl sm:text-6xl font-light tracking-tight mb-6">
+                    Lovisa Reinholdt
+                </h1>
+                
+                <p class="text-xl leading-relaxed mb-6 max-w-2xl mx-auto">
+            
+                    My name is Lovisa Reinholdt, a UX designer with an eye for detail, a heart for users, and a passion for creating meaningful digital experiences. I enjoy turning insights into user-friendly, engaging solutions and thrive in collaborative teams where ideas grow together.
+
+Outside of work, I find inspiration in nature through walks with my dog, horseback riding, and golf, as well as spending time with loved ones.
+
+I am currently looking for an internship (LIA) where I can grow, contribute my skills, and help shape the digital experiences of tomorrow.
+                </p>
+
+                    
+                </p>
+                
+                <a href="mailto:youremail@example.com" class="inline-block bg-[#4d403a] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition-all duration-300 transform hover:scale-[1.02]">
+                    Contact Me for Internship
+                </a>
+            </section>
+
+            <!-- Kompetenser & Verktyg -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left mb-20">
+                
+                <!-- Mina Förmågor (Nu på engelska) -->
+                <div class="fade-in" style="animation-delay: 0.1s;">
+                    <h2 class="text-3xl font-bold mb-6 border-b border-[#e6dccf] pb-2">My Capabilities</h2>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start">
+                            <span class="mr-3 text-2xl text-[#4d403a]">&check;</span> 
+                            <div>Empathy – understanding users’ needs and perspectives.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-2xl text-[#4d403a]">&check;</span> 
+                            <div>Creativity – turning insights into engaging design solutions.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-2xl text-[#4d403a]">&check;</span> 
+                            <div>Collaboration – thriving in teamwork and valuing diverse ideas.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-2xl text-[#4d403a]">&check;</span> 
+                            <div>Attention to Detail – ensuring designs are both functional and polished.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Verktyg jag använder (Nu på engelska) -->
+                <div class="fade-in" style="animation-delay: 0.2s;">
+                    <h2 class="text-3xl font-bold mb-6 border-b border-[#e6dccf] pb-2">Tools & Technologies</h2>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tool-chip py-2 px-4 rounded-full text-sm font-semibold shadow-sm">Figma</span>
+                        <span class="tool-chip py-2 px-4 rounded-full text-sm font-semibold shadow-sm">Miro</span>
+                        <span class="tool-chip py-2 px-4 rounded-full text-sm font-semibold shadow-sm">Adobe XD</span>
+                        <span class="tool-chip py-2 px-4 rounded-full text-sm font-semibold shadow-sm">User Research</span>
+                        <span class="tool-chip py-2 px-4 rounded-full text-sm font-semibold shadow-sm">Design System</span>
+                        <span class="tool-chip py-2 px-4 rounded-full text-sm font-semibold shadow-sm">HTML/CSS</span>
+                        <span class="tool-chip py-2 px-4 rounded-full text-sm font-semibold shadow-sm">Agila metoder</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Avslutande CTA för LIA -->
+            <section class="p-10 rounded-3xl shadow-2xl bg-[#e6dccf] fade-in" style="animation-delay: 0.3s;">
+                <h2 class="text-4xl font-bold mb-4">I’m ready for my internship (LIA)!</h2>
+                <p class="text-xl max-w-2xl mx-auto mb-6">
+                    Are you looking for a dedicated and detail-oriented UX student to contribute to your team? I look forward to learning more about your projects and how I can help develop them further.
+                </p>
+                <a href="mailto:youremail@example.com" class="inline-block bg-[#4d403a] text-white font-bold py-3 px-10 rounded-full shadow-xl hover:bg-[#2d2621] transition-all duration-300">
+                    Send Me a Message Now
+                </a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#4d403a] text-[#fffbf5] text-center py-8 mt-24">
+        <p>&copy; 2024 Lovisa Reinholdt. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+

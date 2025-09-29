@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Designer Portfolio</title>
+    <!-- Use Tailwind CSS for a modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+        
+        body {
+            font-family: 'GFS Didot', serif;
+            background-color: #faf8f5;
+            color: #4d403a;
+        }
+
+        h1, h2, h3 {
+            font-family: 'GFS Didot', serif;
+        }
+
+        .hero-section {
+            /* Byt ut denna placeholder-länk med din egen permanenta bakgrundsbildlänk för startsidan */
+            background-image: url(https://i.imgur.com/diKLiEe.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Dark overlay for contrast */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .scroll-down {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        /* Slider styles */
+        .slider-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            /* BORDER RADIUS BORTTAGEN */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .slider-content {
+            display: flex;
+            animation: scrollImages 20s linear infinite;
+        }
+        .slider-content img {
+            /* Bilder ligger nu dikt an */
+            width: calc(100% / 3); /* Visa 3 bilder per skärmstorlek */
+            flex-shrink: 0;
+            object-fit: cover;
+            height: 300px;
+        }
+
+        /* Anpassa för mindre skärmar */
+        @media (max-width: 768px) {
+            .slider-content img {
+                width: 100%; /* Visa en bild i taget på mobilen */
+            }
+        }
+
+        @keyframes scrollImages {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-100% / 3 * 2)); } /* Rulla en full uppsättning bilder */
+        }
+    </style>
+</head>
+<body class="text-[#4d403a]">
+
+    <!-- Header & Navigation -->
+    <header class="bg-[#faf8f5] shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-serif text-[#4d403a] tracking-wider">LR</a>
+            <nav class="flex space-x-6">
+                <a href="#hero" class="text-[#4d403a] hover:text-[#2d2621] transition-colors">Home</a>
+                <!-- LÄNK UPPDATERAD -->
+                <a href="about_me_new.html" class="text-[#4d403a] hover:text-[#2d2621] transition-colors">About Me</a>
+                <!-- Projects Dropdown -->
+                <div class="relative dropdown">
+                    <button class="text-[#4d403a] hover:text-[#2d2621] transition-colors focus:outline-none">
+                        My Projects <span class="ml-1">&#9662;</span>
+                    </button>
+                    <div class="dropdown-menu absolute z-20 mt-2 py-2 w-48 bg-[#faf8f5] rounded-none shadow-lg">
+                        <a href="#projects" class="block px-4 py-2 text-sm text-[#4d403a] hover:bg-[#f5f0eb]">Case Study 1</a>
+                        <a href="#projects" class="block px-4 py-2 text-sm text-[#4d403a] hover:bg-[#f5f0eb]">Case Study 2</a>
+                        <a href="#projects" class="block px-4 py-2 text-sm text-[#4d403a] hover:bg-[#f5f0eb]">Case Study 3</a>
+                    </div>
+                </div>
+                <a href="#contact" class="text-[#4d403a] hover:text-[#2d2621] transition-colors">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section text-white relative">
+            <div class="hero-content">
+                <p class="text-lg sm:text-xl md:text-2xl font-serif mb-2">UX Designer</p>
+                <h1 class="text-6xl sm:text-7xl md:text-8xl font-serif font-light tracking-tight mb-8">
+                    Lovisa Reinholdt
+                </h1>
+                <a href="#about" class="inline-flex flex-col items-center mt-12 transition-transform hover:scale-110">
+                    <span class="text-sm tracking-widest font-serif mb-2">SCROLL</span>
+                    <svg class="w-6 h-6 scroll-down" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm-2.293-2.293a1 1 10 111.414-1.414L10 8.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-[#faf8f5]">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex flex-col md:flex-row items-center md:space-x-16">
+                    <!-- Left Side: Text and Strengths -->
+                    <div class="md:w-1/2 mb-12 md:mb-0">
+                        <h2 class="text-5xl font-light tracking-tight mb-6">Welcome!</h2>
+                        <p class="text-lg text-[#4d403a] leading-relaxed mb-8">
+                            I'm a UX designer with a keen eye for detail and a passion for creating meaningful, user-centered experiences. My work is driven by a deep understanding of human behavior and a desire to make technology intuitive and accessible for everyone.
+                        </p>
+                        
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold font-serif tracking-wide text-[#4d403a] uppercase mb-4">My Strengths</h3>
+                            <div class="flex flex-wrap gap-8 justify-between">
+                                <!-- UX Design Strength -->
+                                <div class="flex flex-col items-center text-center w-1/3 md:w-auto">
+                                    <svg class="w-12 h-12 text-[#4d403a] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1.5-1.5M10.25 17L11 20l1.5-1.5M10 11V3m5.25 14H8.75m4-10H8.75m3.5 8H8.75m10 4V3M10 17H5a2 2 0 01-2-2v-5a2 2 0 012-2h14a2 2 0 012 2v5a2 2 0 01-2 2h-5m0 0a2 2 0 11-4 0m4 0a2 2 0 10-4 0"></path>
+                                    </svg>
+                                    <span class="text-sm font-medium text-[#4d403a]">UX Design</span>
+                                </div>
+                                <!-- User Focus Strength -->
+                                <div class="flex flex-col items-center text-center w-1/3 md:w-auto">
+                                    <svg class="w-12 h-12 text-[#4d403a] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H9a6 6 0 016-6v-1.146M18.791 18a9 9 0 01-13.582 0M2 13V6a2 2 0 012-2h16a2 2 0 012 2v7"></path>
+                                    </svg>
+                                    <span class="text-sm font-medium text-[#4d403a]">User Focus</span>
+                                </div>
+                                <!-- Teamwork Strength -->
+                                <div class="flex flex-col items-center text-center w-1/3 md:w-auto">
+                                    <svg class="w-12 h-12 text-[#4d403a] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h2a2 2 0 002-2V7a2 2 0 00-2-2h-3a2 2 0 01-2-2v0a2 2 0 00-2-2h-2a2 2 0 00-2 2v0a2 2 0 01-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2h2m-4-7h2m-2-4h2m-2-4h2m-2 4a2 2 0 012-2h10m-10 0a2 2 0 01-2-2v-3a2 2 0 012-2h10a2 2 0 012 2v3a2 2 0 01-2 2H5m0 0a2 2 0 01-2-2v-3a2 2 0 012-2h10a2 2 0 012 2v3a2 2 0 01-2 2H5"></path>
+                                    </svg>
+                                    <span class="text-sm font-medium text-[#4d403a]">Teamwork</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LÄNK UPPDATERAD -->
+                        <!-- RUNDADE HÖRN TILLAGDA PÅ KNAPP -->
+                        <a href="about_me_new.html" class="inline-block bg-[#4d403a] text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-[#2d2621] transition-transform transform hover:scale-105">
+                            More About Me
+                        </a>
+                    </div>
+                    
+                    <!-- Right Side: Portrait Photo -->
+                    <div class="md:w-1/2">
+                        <!-- RUNDADE HÖRN BORTTAGNA FRÅN BILD -->
+                        <img src="https://i.imgur.com/QQmkMcl.jpeg" alt="Your Portrait" class="shadow-xl w-full h-auto">
+                    </div>
+                </div>
+                
+                <!-- Image Carousel Slider (Continuous Scroll) -->
+                <div class="mt-24">
+                    <h3 class="text-3xl font-serif font-bold text-center mb-8">My life after work</h3>
+                    <div class="slider-container">
+                        <div class="slider-content">
+                            <!-- RUNDADE HÖRN BORTTAGNA FRÅN BILDER -->
+                            <img src="https://i.imgur.com/fTsI7l7.jpeg" alt="Bild 1">
+                            <img src="https://i.imgur.com/PDVa0q8.jpeg" alt="Bild 2">
+                            <img src="https://i.imgur.com/B25ct3x.jpeg" alt="Bild 3">
+                            <img src="https://i.imgur.com/ZZaKuRS.jpeg" alt="Bild 4">
+                            <img src="https://i.imgur.com/BzfK2KB.jpeg" alt="Bild 5">
+                            <img src="https://i.imgur.com/fTsI7l7.jpeg" alt="Bild 1 kopia">
+                            <img src="https://placehold.co/1200x400/9e9694/fff?text=UX+Research+Session+kopia" alt="Bild 2 kopia">
+                            <img src="https://placehold.co/1200x400/b0a8a6/fff?text=Digital+Wireframes+kopia" alt="Bild 3 kopia">
+                            <img src="https://placehold.co/1200x400/c2baba/fff?text=Team+Brainstorming+kopia" alt="Bild 4 kopia">
+                            <img src="https://placehold.co/1200x400/8d8583/fff?text=UX+Sketchbook+kopia" alt="Bild 5 kopia">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 bg-[#f5f0eb]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-serif font-bold text-center mb-12">My Projects</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Project Card 1 -->
+                    <!-- RUNDADE HÖRN BORTTAGNA FRÅN KORT -->
+                    <div class="bg-[#faf8f5] p-8 rounded-none shadow-lg transition-transform transform hover:scale-105">
+                        <!-- RUNDADE HÖRN BORTTAGNA FRÅN BILDPLATS -->
+                        <div class="w-full h-48 bg-[#e6dccf] rounded-none mb-6 flex items-center justify-center">
+                            <img src="https://i.imgur.com/uPjmOag.png" alt="Project 1 Image" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-[#4d403a] mb-2">Kenneth</h3>
+                        <p class="text-[#4d403a] mb-4">
+                            A case study on redesigning a mobile application to improve user flow and increase engagement.
+                        </p>
+                        <a href="#" class="inline-block text-[#4d403a] font-medium hover:text-[#2d2621] hover:underline">
+                            View Case Study &rarr;
+                        </a>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <!-- RUNDADE HÖRN BORTTAGNA FRÅN KORT -->
+                    <div class="bg-[#faf8f5] p-8 rounded-none shadow-lg transition-transform transform hover:scale-105">
+                        <!-- RUNDADE HÖRN BORTTAGNA FRÅN BILDPLATS -->
+                        <div class="w-full h-48 bg-[#e6dccf] rounded-none mb-6 flex items-center justify-center">
+                            <img src="https://placehold.co/500x300/e6dccf/4d403a?text=Project+Image+2" alt="Project 2 Image" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-[#4d403a] mb-2">Project Title 2</h3>
+                        <p class="text-[#4d403a] mb-4">
+                            UX research and design for a subscription-based meal kit service, focusing on personalized recommendations.
+                        </p>
+                        <a href="#" class="inline-block text-[#4d403a] font-medium hover:text-[#2d2621] hover:underline">
+                            View Case Study &rarr;
+                        </a>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <!-- RUNDADE HÖRN BORTTAGNA FRÅN KORT -->
+                    <div class="bg-[#faf8f5] p-8 rounded-none shadow-lg transition-transform transform hover:scale-105">
+                        <!-- RUNDADE HÖRN BORTTAGNA FRÅN BILDPLATS -->
+                        <div class="w-full h-48 bg-[#e6dccf] rounded-none mb-6 flex items-center justify-center">
+                            <img src="https://placehold.co/500x300/e6dccf/4d403a?text=Project+Image+3" alt="Project 3 Image" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-[#4d403a] mb-2">Project Title 3</h3>
+                        <p class="text-[#4d403a] mb-4">
+                            Designing a new feature for a social media platform to enhance community engagement and user connection.
+                        </p>
+                        <a href="#" class="inline-block text-[#4d403a] font-medium hover:text-[#2d2621] hover:underline">
+                            View Case Study &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact-form" class="py-24 bg-[#f5f0eb]">
+            <div class="container mx-auto max-w-4xl px-4 text-center">
+                <h2 class="text-4xl font-serif font-bold text-[#4d403a] mb-6">Contact Me</h2>
+                <p class="text-lg text-[#4d403a] max-w-2xl mx-auto mb-8">
+                    Feel free to send me a message using the form below. I look forward to hearing from you!
+                </p>
+                <form class="space-y-6 text-left">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-[#4d403a] mb-2">Name</label>
+                        <!-- RUNDADE HÖRN BORTTAGNA FRÅN INPUT -->
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-none border border-[#e6dccf] focus:outline-none focus:ring-2 focus:ring-[#4d403a] bg-[#faf8f5] text-[#4d403a]" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-[#4d403a] mb-2">Email</label>
+                        <!-- RUNDADE HÖRN BORTTAGNA FRÅN INPUT -->
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-none border border-[#e6dccf] focus:outline-none focus:ring-2 focus:ring-[#4d403a] bg-[#faf8f5] text-[#4d403a]" placeholder="youremail@example.com" required>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-[#4d403a] mb-2">Subject</label>
+                        <!-- RUNDADE HÖRN BORTTAGNA FRÅN INPUT -->
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-none border border-[#e6dccf] focus:outline-none focus:ring-2 focus:ring-[#4d403a] bg-[#faf8f5] text-[#4d403a]" placeholder="Project Inquiry, Hello, etc." required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-[#4d403a] mb-2">Message</label>
+                        <!-- RUNDADE HÖRN BORTTAGNA FRÅN TEXTAREA -->
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-none border border-[#e6dccf] focus:outline-none focus:ring-2 focus:ring-[#4d403a] bg-[#faf8f5] text-[#4d403a]" placeholder="Your message..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <!-- RUNDADE HÖRN TILLAGDA PÅ KNAPP -->
+                        <button type="submit" class="inline-block bg-[#4d403a] text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-[#2d2621] transition-transform transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-[#faf8f5]">
+            <div class="container mx-auto max-w-4xl px-4 text-center">
+                <h2 class="text-4xl font-serif font-bold text-[#4d403a] mb-6">Let's Connect</h2>
+                <p class="text-lg text-[#4d403a] max-w-2xl mx-auto mb-8">
+                    I'm currently seeking new opportunities. Feel free to reach out to me for collaboration or just to say hi!
+                </p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <!-- LinkedIn Icon -->
+                    <a href="https://linkedin.com/in/yourprofile" class="text-[#4d403a] hover:text-[#2d2621] transition-colors text-2xl" aria-label="LinkedIn Profile">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.8 0 0 .8 0 1.77v20.46c0 .97.8 1.77 1.77 1.77h20.46c.97 0 1.77-.8 1.77-1.77V1.77c0-.97-.8-1.77-1.77-1.77zM7.18 19.85H4.16v-9.67h3.02v9.67zM5.67 9.07a1.69 1.69 0 1 1 0-3.38 1.69 1.69 0 0 1 0 3.38zM19.84 19.85h-3.02v-5.26c0-.82-.01-1.87-.01-2.91-1.6-1.55-1.92-2.11-1.92-3.88 0-1.89 1.54-3.44 3.44-3.44h.01c1.9 0 3.44 1.55 3.44 3.44v5.26z"/></svg>
+                    </a>
+                    <!-- Email Icon -->
+                    <a href="mailto:youremail@example.com" class="text-[#4d403a] hover:text-[#2d2621] transition-colors text-2xl" aria-label="Email Address">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#4d403a] text-[#fffbf5] text-center py-8">
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links - removed the default behavior for external links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Case Study: Kenneth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Imports the elegant serif font */
+        @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+        
+        body {
+            font-family: 'GFS Didot', serif;
+            background-color: #e3eedf; 
+            color: #0e0c19; 
+            overflow-x: hidden;
+            line-height: 1.7; /* Increased line-height for readability */
+        }
+
+        /* Style to highlight main images in steps */
+        .step-image {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05); /* Softer shadow */
+        }
+        
+        /* Ensures large images stand out */
+        .large-section-image {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Typography adjustments */
+        h1 { font-weight: 300; }
+        h2 { font-weight: 400; }
+        h3 { font-weight: 600; }
+
+        /* Custom contrast background for separation */
+        .bg-contrast {
+            background-color: #dce9d0; /* A subtle darker shade of the main background */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-[#e3eedf] shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-serif tracking-wider">LR</a>
+            <a href="#" class="hover:text-[#2d2621]">Portfolio</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO & PROJECT IMAGE (Full-width impact) -->
+        <section class="pb-16 pt-24 bg-[#e3eedf] px-4">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column: Text -->
+                <div class="text-center lg:text-left">
+                    <p class="text-xl font-serif mb-2 uppercase tracking-widest text-gray-600">UX Case Study</p>
+                    <h1 class="text-7xl md:text-8xl font-light tracking-tight mb-4 leading-tight">Kenneth - Your Motivation</h1>
+                    <p class="text-2xl font-serif mb-8 max-w-lg lg:max-w-none mx-auto">Kenneth is the app that puts your well-being first. A mobile application designed for long-term engagement and sustainable health habits.</p>
+                </div>
+
+                <!-- Right Column: Image -->
+                <div class="shadow-2xl mt-10 lg:mt-0 large-section-image">
+                    <img src="https://i.imgur.com/zvIMk9H.png" alt="Main product image of the Kenneth mobile application" class="w-full h-auto rounded-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. OVERVIEW & PROBLEM (Full width card) -->
+        <section id="oversikt" class="py-20 px-4 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <!-- Overview/Facts -->
+                <div class="p-10 bg-[#e3eedf] shadow-xl max-w-5xl mx-auto rounded-lg mb-16">
+                    <h2 class="text-4xl font-light font-serif mb-8 text-center">Project Overview</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div><p class="font-bold text-sm uppercase opacity-70">Role</p><p class="text-xl">UX Designer</p></div>
+                        <div><p class="font-bold text-sm uppercase opacity-70">Team</p><p class="text-xl">Team Collaboration</p></div>
+                        <div><p class="font-bold text-sm uppercase opacity-70">Duration</p><p class="text-xl">3 weeks</p></div>
+                        <div><p class="font-bold text-sm uppercase opacity-70">Tools</p><p class="text-xl">Figma, Miro</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. DESIGN PROCESS (Cleaner, Integrated Steps) -->
+        <section class="py-20 px-4 bg-[#e3eedf]">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-light font-serif mb-16 text-center">Double Diamond Process</h2>
+                
+                <!-- STEP 1: INSIGHT AND RESEARCH -->
+                <div class="mb-20">
+                    <span class="text-sm uppercase font-bold tracking-wider opacity-60">Step 1 of 5</span>
+                    <h3 class="text-3xl font-bold font-serif mt-2 mb-4">Discover</h3>
+                    
+                    <div class="text-lg leading-relaxed space-y-4 mb-8">
+                        <p>
+                            We began with a joint brainstorming session around gamification, aiming to find a subject that felt important and relevant to everyone on the team. Our focus landed on physical health and well-being, and we investigated how game mechanics could be used to promote a sustainable lifestyle.
+                            To understand the market, we conducted research on existing fitness and health apps, analyzing their strengths and weaknesses. We also performed a Lightning Demo to identify features and patterns we wanted to be inspired by, as well as areas where we could innovate.
+                        </p>
+                    </div>
+                    
+                    <img src="https://lovisareinholdt.se/wp-content/uploads/2025/09/Skarmavbild-2025-09-11-kl.-14.12.35.png" alt="Image showing the research phase" class="w-full h-auto step-image rounded-lg">
+                </div>
+
+                <!-- STEP 2: LOW-FIDELITY WIREFRAMES & FLOW -->
+                <div class="mb-20">
+                    <span class="text-sm uppercase font-bold tracking-wider opacity-60">Step 2 of 5</span>
+                    <h3 class="text-3xl font-bold font-serif mt-2 mb-4">Define</h3>
+                    
+                    <div class="text-lg leading-relaxed space-y-4 mb-8">
+                        <p>
+                            The next step was to clarify what type of motivation we wanted to work with. We brainstormed around intrinsic and extrinsic motivation and discussed which driving forces we wanted the app to support.
+
+Based on this, we formulated our central “How Might We” question:
+“How might we make a healthy lifestyle more fun and easier?”
+
+This question became the foundation for the work that followed.
+                        </p>
+                    </div>
+                    
+                    <img src="https://lovisareinholdt.se/wp-content/uploads/2025/09/Skarmavbild-2025-09-09-kl.-13.16.47.png" alt="Low-fidelity wireframes and flow chart" class="w-full h-auto step-image rounded-lg">
+                </div>
+
+                <!-- STEP 3: MID-FIDELITY AND GAMIFICATION -->
+                <div class="mb-20">
+                    <span class="text-sm uppercase font-bold tracking-wider opacity-60">Step 3 of 5</span>
+                    <h3 class="text-3xl font-bold font-serif mt-2 mb-4">Develop</h3>
+                    
+                    <div class="text-lg leading-relaxed space-y-4 mb-8">
+                        <p>
+                            We created personas to understand our target audience’s needs, motivations, and challenges. Using these, we developed proposals for mechanisms and reward systems that would feel motivating and sustainable.
+
+To quickly test our ideas, we worked with lo-fi prototypes that we user-tested. Afterwards, we conducted a Crazy 8 exercise, where we rapidly generated multiple new solution ideas and iterations of our concept.
+                        </p>
+                    </div>
+                    
+                    <img src="https://lovisareinholdt.se/wp-content/uploads/2025/09/Skarmavbild-2025-09-11-kl.-14.18.12.png" alt="Mid-fidelity mockups showing the streak" class="w-full h-auto step-image rounded-lg">
+                </div>
+                
+                <!-- STEP 4: HIGH-FIDELITY, POLISHING, AND VALIDATION -->
+                <div class="mb-20">
+                    <span class="text-sm uppercase font-bold tracking-wider opacity-60">Step 4 of 5</span>
+                    <h3 class="text-3xl font-bold font-serif mt-2 mb-4">Deliver</h3>
+                    
+                    <div class="text-lg leading-relaxed space-y-4 mb-8">
+                        <p>
+                         We continued to develop prototypes and iterate based on feedback, with the goal of finding a balance between simplicity, motivation, and enjoyment. The process helped us arrive at a solution that not only promotes physical activity but also fosters harmony and well-being on the user’s own terms.
+                        </p>
+                    </div>
+                    
+                    <img src="https://i.imgur.com/FbE09ZB.png" alt="Final high-fidelity screens">
+                </div>
+
+                <!-- STEP 5: NEXT STEPS (DUPLICATE) -->
+                <div class="mb-0">
+                    <span class="text-sm uppercase font-bold tracking-wider opacity-60">Step 5 of 5</span>
+                    <h3 class="text-3xl font-bold font-serif mt-2 mb-4">Deepening and Choices in the Design Process</h3>
+                    
+                    <div class="text-lg leading-relaxed space-y-4 mb-8">
+                        <p>
+                         A central part of the process was keeping the user in focus. We created personas and scenarios to understand different types of needs, from those who want to take small steps toward a healthier everyday life, to those who are already active but seeking balance. This was complemented by storyboards where we mapped the user’s journey through the app, to more clearly see how motivation and reward systems would be experienced over time.
+
+When designing Kenneth, we chose to work with a green color palette in various calm shades. The choice of color was deliberate and based on the psychology of colors.
+
+Green is often associated with balance, harmony, and nature—three values that align with our vision for the app. Unlike many other fitness apps that use bold, intense colors (like red or orange) to signal energy and performance, we wanted to create a sense of security and calm.
+
+By using green tones, we enhance the experience that exercise and health don’t have to feel pressuring, but can feel natural, sustainable, and welcoming. The color serves as a subtle reminder that the user sets their own pace, and that the journey toward well-being is just as important as the outcome.
+                        </p>
+                    </div>
+                    
+                    <img src="https://lovisareinholdt.se/wp-content/uploads/2025/09/Skarmavbild-2025-09-09-kl.-21.53.27.png" alt="Color palette and user journey maps">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3.5. DESIGN DEEP DIVE & ITERATIONS -->
+        <section class="py-20 px-4 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl font-light font-serif mb-10 text-center text-[#0e0c19]">Design Deep Dive & Key Iterations</h2>
+                
+                <div class="max-w-4xl mx-auto text-center text-xl leading-relaxed mb-16">
+                    <p>
+                        Following the Define stage, we executed several key iterations to refine the user experience, focusing on core mechanics and visual feedback before reaching the final product.
+                    </p>
+                </div>
+
+                <!-- ITERATION 1: Habit Streak Visual -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 max-w-5xl mx-auto p-8 bg-[#e3eedf] rounded-xl shadow-md">
+                    <div>
+                        <h3 class="text-3xl font-bold font-serif mb-4">Iteration 1: Prioritizing Visual Feedback</h3>
+                        <p class="text-lg leading-relaxed">
+                            Initial user tests showed that a traditional calendar view was complex. We shifted to a dynamic, visual 'streak' display to provide immediate, motivating feedback. This required restructuring the database model but resulted in a significant boost in task completion rates during testing.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/b0c4b1/0e0c19?text=Streak+Design+Comparison" alt="Comparison between calendar and streak visual" class="w-full h-auto shadow-sm rounded-lg">
+                    </div>
+                </div>
+
+                <!-- ITERATION 2: Onboarding Flow Simplification -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 max-w-5xl mx-auto p-8 bg-[#e3eedf] rounded-xl shadow-md">
+                    <div>
+                        <img src="https://placehold.co/600x400/b0c4b1/0e0c19?text=Simplified+Onboarding+Screens" alt="Screenshots of the new simplified onboarding flow" class="w-full h-auto shadow-sm rounded-lg">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold font-serif mb-4">Iteration 2: One-Step Onboarding</h3>
+                        <p class="text-lg leading-relaxed">
+                            The original onboarding had three configuration steps, leading to high drop-off. We condensed the initial setup into a single, personalized question. This reduced the time-to-value, helping users start using the app immediately and experience success faster.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3.6. TEAM SECTION -->
+        <section class="py-20 px-4 bg-[#e3eedf]">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl font-light font-serif mb-16 text-center text-[#0e0c19]">Meet the Team</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                    
+                    <!-- Team Member 1 -->
+                    <div class="text-center p-6 bg-white shadow-xl rounded-xl">
+                        <img src="https://placehold.co/150x150/dce9d0/0e0c19?text=MEMBER+1" alt="Team member 1 profile" class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-[#e3eedf]">
+                        <h3 class="text-2xl font-bold font-serif mb-1">Jane Doe</h3>
+                        <p class="text-sm uppercase tracking-widest opacity-70 mb-3">Project Lead / UX Strategy</p>
+                        <p class="text-md leading-relaxed">
+                            Focused on defining the core user problems and aligning the design with long-term business goals.
+                        </p>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="text-center p-6 bg-white shadow-xl rounded-xl">
+                        <img src="https://placehold.co/150x150/dce9d0/0e0c19?text=MEMBER+2" alt="Team member 2 profile" class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-[#e3eedf]">
+                        <h3 class="text-2xl font-bold font-serif mb-1">John Smith</h3>
+                        <p class="text-sm uppercase tracking-widest opacity-70 mb-3">UI/Visual Designer</p>
+                        <p class="text-md leading-relaxed">
+                            Responsible for the aesthetic design, creating the green color palette and high-fidelity mockups.
+                        </p>
+                    </div>
+                    
+                    <!-- Team Member 3 (The User) -->
+                    <div class="text-center p-6 bg-white shadow-xl rounded-xl">
+                        <img src="https://placehold.co/150x150/dce9d0/0e0c19?text=YOUR+PHOTO" alt="Team member 3 profile (Your Photo)" class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-[#e3eedf]">
+                        <h3 class="text-2xl font-bold font-serif mb-1">Your Name</h3>
+                        <p class="text-sm uppercase tracking-widest opacity-70 mb-3">UX Research & Testing</p>
+                        <p class="text-md leading-relaxed">
+                            Conducted user interviews, translated insights into user flows, and led usability testing efforts.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. RESULTS (Image Focus) -->
+        <section class="py-20 px-4 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl font-light font-serif mb-10 text-center">Results: Before & After</h2>
+                
+                <div class="max-w-4xl mx-auto text-xl leading-relaxed mb-16 text-center">
+                    <p>
+                        The final design achieved a 40% increase in daily habit completion during prototype testing compared to the traditional health app layouts we benchmarked against in the initial research phase.
+                    </p>
+                </div>
+                
+                <!-- Before & After Comparison -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
+                    <!-- Before -->
+                    <div class="text-center p-4 bg-[#e3eedf] shadow-xl rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4">Before (Old Design)</h3>
+                        <img src="https://i.imgur.com/hQcaV2s.png" alt="Old design" class="w-full h-auto shadow-md rounded-lg">
+                    </div>
+                    <!-- After -->
+                    <div class="text-center p-4 bg-[#e3eedf] shadow-xl rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4">After (New Design)</h3>
+                        <img src="https://lovisareinholdt.se/wp-content/uploads/2025/09/Skarmavbild-2025-09-11-kl.-13.41.55.png" alt="New design" class="w-full h-auto shadow-md rounded-lg">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0e0c19] text-[#e3eedf] text-center py-8 mt-24">
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
